@@ -7,14 +7,14 @@
 			<h1><a href="/">AnnereinWalma Blog</a></h1>
 		</div>
 
-		<div>
-			<h1>Even proberen</h1>
-			<h2>Yolo</h2>
-			<h3>nog een keer YOLO</h3>
-			<h4>YOLO</h4>
-			<p>published: 4-11-2017, 14:55</p>
-		</div>
-
+		{% for post in posts %}
+			<div>
+				<p>published: {{ post.published_date }}</p>
+        		<h1><a href="">{{ post.title }}</a></h1>
+        		<p>{{ post.text|linebreaksbr }}</p>
+			</div>
+		{% endfor %}
+		
 		<div>
 			<em>idk wat dit is</em>
 			<strong>nog steeds geen idee</strong>
